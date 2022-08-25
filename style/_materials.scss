@@ -1,0 +1,27 @@
+@import url("https://use.typekit.net/rla1ynx.css");
+
+// * Colors
+
+$deepMarine: #2c2e30;
+// $deepMarine: #303030;
+$pink: #FF45D6;
+$blue: #0088EB;
+$green: #00FFA3;
+$bg: #F1F1F1;
+$lwGradient: linear-gradient(90deg, #00FFA3 0%, #0088EB 50%, #FF45D6 100%);
+
+// * Animations & Transitions
+
+$timingFunc: cubic-bezier(.06, .41, .12, .93);
+
+
+// * Sizes
+
+$width77: 75%;
+$width90: 90%;
+$width50: 50%;
+
+// * Styles
+
+$headerShadow: 0px .3rem .4rem rgba(0, 0, 0, 0.090),
+0px .3rem .5rem rgba(0, 0, 0, 0.206);
