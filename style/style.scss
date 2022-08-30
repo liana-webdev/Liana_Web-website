@@ -46,12 +46,14 @@ h1 {
   grid-area: h1;
 }
 
+
 h2 {
   font-family: 'Coolvetica';
   font-style: normal;
   font-weight: 400;
   font-size: 4rem;
   line-height: 74.19%;
+  grid-area: h2;
 }
 
 h3 {
@@ -61,6 +63,21 @@ h3 {
   font-weight: 500;
   font-size: 4rem;
   line-height: 74.19%;
+
+}
+
+
+h4 {
+  grid-area: h4;
+  font-family: "work-sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+  margin-top: 3rem;
+  font-size: 2rem;
+  line-height: 100%;
+  opacity: .9;
+
 }
 
 
@@ -208,7 +225,6 @@ button {
 
 }
 
-
 nav {
   position: relative;
   height: 100%;
@@ -257,7 +273,6 @@ nav {
     font-size: 2rem;
   }
 }
-
 
 .gradient-text {
   background: linear-gradient(to right, $pink, $blue, $green);
@@ -557,7 +572,7 @@ nav {
 
     .item-1 {
       grid-area: div1;
-      background: url("../img/project_lwave.jpg");
+      background: url("../img/project_thumbnails/project_Architecture.png");
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
@@ -565,7 +580,7 @@ nav {
 
     .item-2 {
       grid-area: div2;
-      background: url("../img/project_PianoLessons.jpg");
+      background: url("../img/project_thumbnails/project_FlyingSpur.png");
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
@@ -573,7 +588,7 @@ nav {
 
     .item-3 {
       grid-area: div3;
-      background: url("../img/project_FlyingSpur.jpg");
+      background: url("../img/project_thumbnails/project_lwave.png");
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
@@ -581,7 +596,7 @@ nav {
 
     .item-4 {
       grid-area: div4;
-      background: url("../img/project_Architecture.jpg");
+      background: url("../img/project_thumbnails/project_PianoLessons.png");
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
@@ -705,7 +720,7 @@ nav {
 }
 
 #special {
-  margin-top: 10%;
+  margin-top: 15%;
   margin-bottom: 10%;
 
   .container {
@@ -718,9 +733,9 @@ nav {
     grid-template-columns: .8fr 1fr .8fr;
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-areas:
-      "pencil h1 book"
-      "pencil p book"
-      "btn btn btn"
+      "book h1 pencil"
+      "book p pencil"
+      "book btn pencil"
     ;
     align-items: center;
     z-index: -2;
@@ -734,6 +749,7 @@ nav {
     grid-area: h1;
     align-self: center;
     place-self: center;
+    text-align: center;
   }
 
   p {
@@ -753,8 +769,10 @@ nav {
 
   .book {
     grid-area: book;
-    background: url("../img/book.png");
+    background: url("../img/3EssentialDecisionsBook.png");
     background-repeat: no-repeat;
+    transform: rotate(-7deg);
+    filter: drop-shadow(0px 20px 17px rgba(0, 0, 0, 0.3));
     background-size: contain;
     background-position: center;
     width: 100%;
@@ -769,7 +787,7 @@ nav {
 
   .btn-cont {
     justify-self: center;
-    width: 10%;
+    width: 40%;
   }
 }
 
@@ -1101,7 +1119,6 @@ footer {
         color: white
       }
 
-      .container {}
     }
 
     .hidden-once {
@@ -1332,6 +1349,9 @@ footer {
 
   }
 
+  .div {
+    height: 5rem;
+  }
 
   #interested {
     margin-top: 10%;
@@ -1393,7 +1413,7 @@ footer {
 
       display: grid;
       grid-template-columns: 1fr .5fr;
-      grid-template-rows: 1fr;
+      grid-template-rows: .5fr 1fr;
       grid-template-areas:
         "h1 div"
         "p div"
@@ -1458,6 +1478,7 @@ footer {
   }
 
   .block {
+    margin-bottom: 6rem;
     background-color: white;
     padding: 3rem 0;
     margin-top: 3rem;
@@ -1479,6 +1500,7 @@ footer {
     span {
       width: 3.4rem;
       height: 3.4rem;
+      filter: drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.398));
     }
 
     .pallete {
@@ -1509,10 +1531,6 @@ footer {
     }
   }
 
-  h2 {
-    margin-top: 6rem;
-
-  }
 
   #steps {
     .container {
@@ -1746,6 +1764,268 @@ footer {
     }
   }
 
+  .finish {
+    margin-bottom: 6rem;
+    background-color: $deepMarine;
+    margin: 5rem 0;
+    padding: 2rem 0;
+
+    img {
+      margin-bottom: 4px;
+      margin-right: 7px;
+      height: 7px;
+    }
+
+    .container {
+      // height: 30vh;
+      display: grid;
+      grid-template-columns: .3fr 1fr .6fr;
+      grid-template-rows: .2fr .1fr 1fr .2fr;
+      grid-template-areas:
+        ". . img"
+        "flag h3 img"
+        "flag p img"
+        ". . img"
+
+      ;
+      column-gap: 3rem;
+      row-gap: 2rem;
+
+      .flag {
+        grid-area: flag;
+        background: url("../img/finish.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        width: auto;
+        height: 10rem;
+      }
+
+
+
+      p {
+        align-self: start;
+      }
+
+
+
+
+      h3 {
+        color: white;
+      }
+
+      p {
+        color: #D9D9D9;
+      }
+
+      .img {
+        grid-area: img;
+        width: 100%;
+        height: 100%;
+        background: url("../img/fav-folder.png");
+        background-repeat: no-repeat;
+        background-size: 50%;
+        background-position: center;
+
+        opacity: 0;
+        transform: translate(0px, -10px);
+        animation: imgAppear 1s ease .2s forwards;
+      }
+    }
+  }
+
+  #addons {
+    margin-bottom: 6rem;
+
+    .container {
+      display: grid;
+      grid-template-columns: 1fr .6fr;
+      grid-template-rows: .1fr 1fr;
+      grid-template-areas:
+        "h2 img"
+        "pb img"
+      ;
+      column-gap: 3rem;
+      row-gap: 4rem;
+    }
+
+    .pb {
+      grid-area: pb;
+    }
+
+    .img {
+      grid-area: img;
+      width: 100%;
+      height: 100%;
+      background:
+        url("../img/project_thumbnails/Architecture_projects_anim.gif"),
+        url("../img/project_thumbnails/Architecture_projects_still.jpg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      filter: drop-shadow(0px 30px 20px rgba(0, 0, 0, 0.2));
+    }
+  }
+}
+
+#WORK_PAGE {
+  #work {
+
+    .container {
+      padding-top: 10rem;
+    }
+
+    .project {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: .5fr 1fr .5fr;
+      grid-template-areas:
+        "prev ."
+        "prev content"
+        "prev ."
+      ;
+      column-gap: 3rem;
+      row-gap: 4rem;
+      padding: 3rem 0;
+    }
+
+    .preview {
+      grid-area: prev;
+
+    }
+
+    .piano {
+      background: url("../img/project_thumbnails/project_PianoLessons.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: left;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      column-gap: 3rem;
+      row-gap: 4rem;
+      align-self: center;
+      justify-content: center;
+      grid-area: content;
+    }
+
+    .lwave {
+      background: url("../img/project_thumbnails/project_lwave.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: left;
+    }
+
+    .roman {
+      background: url("../img/project_thumbnails/project_Architecture.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: left;
+    }
+
+    .spur {
+      background: url("../img/project_thumbnails/project_FlyingSpur.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: left;
+    }
+
+    .view-proj {
+      position: absolute;
+      background-color: #9D9D9D;
+    }
+
+  }
+}
+
+#CONTACT_PAGE {
+  #contact-me {
+    padding-top: 19rem;
+
+    h1 {
+      margin-bottom: 5rem;
+    }
+
+    p {
+      margin-bottom: 5rem;
+
+    }
+
+    .btn-cont {
+      width: 20%;
+      margin-bottom: 10rem;
+
+    }
+
+    form {
+      margin-bottom: 6rem;
+      height: 23vh;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      grid-template-areas:
+
+        "n m"
+        "c m"
+        "e btn-group"
+
+      ;
+
+      column-gap: 3rem;
+      row-gap: 3rem;
+
+
+      .name {
+        grid-area: n;
+      }
+
+      .comp {
+        grid-area: c;
+      }
+
+      .email {
+        grid-area: e;
+      }
+
+      .mess {
+        grid-area: m;
+      }
+
+      input {
+        height: 4rem;
+      }
+
+      textarea {
+        height: 11rem;
+      }
+
+      input,
+      textarea {
+        border: none;
+        border-radius: .9rem;
+        font-size: 1.5rem;
+        padding: 1rem;
+        font-family: "work-sans", sans-serif;
+        font-weight: 400;
+
+        &::placeholder {
+          color: $deepMarine;
+          opacity: .5;
+        }
+      }
+
+      .btn-group {
+        justify-self: end;
+      }
+
+      .btn-cont {
+        justify-self: end;
+        width: 50%;
+      }
+    }
+  }
 }
 
 @import "./_responsive.scss";
