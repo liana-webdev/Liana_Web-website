@@ -149,6 +149,15 @@ button:hover {
   grid-area: btn-sec;
 }
 
+.form-sec {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  background: transparent;
+  grid-area: btn-sec;
+}
+
 .nav-container {
   display: flex;
   background: rgba(241, 241, 241, 0.9);
@@ -1161,11 +1170,12 @@ footer .container .abn {
 #ABOUT_PAGE .div {
   height: 5rem;
 }
-#ABOUT_PAGE #interested {
+
+#interested {
   margin-top: 10%;
   margin-bottom: 10%;
 }
-#ABOUT_PAGE #interested .container {
+#interested .container {
   height: auto;
   padding: 5rem 0;
   background: white;
@@ -1182,19 +1192,19 @@ footer .container .abn {
   row-gap: 5rem;
   justify-items: center;
 }
-#ABOUT_PAGE #interested h1 {
+#interested h1 {
   align-self: center;
   place-self: center;
 }
-#ABOUT_PAGE #interested p {
+#interested p {
   text-align: center;
 }
-#ABOUT_PAGE #interested .btn-group {
+#interested .btn-group {
   grid-area: btn;
   justify-content: center;
   align-items: center;
 }
-#ABOUT_PAGE #interested .btn-cont {
+#interested .btn-cont {
   justify-self: center;
   width: 30%;
 }
@@ -1568,6 +1578,11 @@ footer .container .abn {
   filter: drop-shadow(0px 30px 20px rgba(0, 0, 0, 0.2));
 }
 
+#WORK_PAGE #work {
+  overflow: hidden;
+  position: relative;
+  display: flex;
+}
 #WORK_PAGE #work .container {
   padding-top: 10rem;
 }
@@ -1619,8 +1634,45 @@ footer .container .abn {
   background-position: left;
 }
 #WORK_PAGE #work .view-proj {
+  box-sizing: content-box;
+  color: white;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 100;
+  position: fixed;
+  left: 0;
+  right: 0;
+  max-height: 100vh;
+  background-color: rgba(32, 32, 32, 0.809);
+  -webkit-backdrop-filter: blur(0.5rem);
+          backdrop-filter: blur(0.5rem);
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+  overflow-y: scroll;
+}
+#WORK_PAGE #work .view-proj .container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 6rem 0;
+  position: relative;
+}
+#WORK_PAGE #work .view-proj .container .proj-img {
+  background: url("../img/project_thumbnails/Piano_dribbble_shot.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left;
+  height: 70vh;
+  width: 100%;
+}
+#WORK_PAGE #work .view-proj .container .close {
+  text-decoration: underline;
   position: absolute;
-  background-color: #9D9D9D;
+  right: 0;
+}
+#WORK_PAGE #work .toggleOpacity {
+  visibility: visible;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+  opacity: 1;
 }
 
 #CONTACT_PAGE #contact-me {
@@ -1632,13 +1684,12 @@ footer .container .abn {
 #CONTACT_PAGE #contact-me p {
   margin-bottom: 5rem;
 }
-#CONTACT_PAGE #contact-me .btn-cont {
+#CONTACT_PAGE #contact-me .get-started {
   width: 20%;
   margin-bottom: 10rem;
 }
-#CONTACT_PAGE #contact-me form {
+#CONTACT_PAGE #contact-me .form {
   margin-bottom: 6rem;
-  height: 23vh;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(3, 1fr);
@@ -1647,26 +1698,26 @@ footer .container .abn {
        column-gap: 3rem;
   row-gap: 3rem;
 }
-#CONTACT_PAGE #contact-me form .name {
+#CONTACT_PAGE #contact-me .form .name {
   grid-area: n;
 }
-#CONTACT_PAGE #contact-me form .comp {
+#CONTACT_PAGE #contact-me .form .comp {
   grid-area: c;
 }
-#CONTACT_PAGE #contact-me form .email {
+#CONTACT_PAGE #contact-me .form .email {
   grid-area: e;
 }
-#CONTACT_PAGE #contact-me form .mess {
+#CONTACT_PAGE #contact-me .form .mess {
   grid-area: m;
 }
-#CONTACT_PAGE #contact-me form input {
+#CONTACT_PAGE #contact-me .form input {
   height: 4rem;
 }
-#CONTACT_PAGE #contact-me form textarea {
+#CONTACT_PAGE #contact-me .form textarea {
   height: 11rem;
 }
-#CONTACT_PAGE #contact-me form input,
-#CONTACT_PAGE #contact-me form textarea {
+#CONTACT_PAGE #contact-me .form input,
+#CONTACT_PAGE #contact-me .form textarea {
   border: none;
   border-radius: 0.9rem;
   font-size: 1.5rem;
@@ -1674,23 +1725,23 @@ footer .container .abn {
   font-family: "work-sans", sans-serif;
   font-weight: 400;
 }
-#CONTACT_PAGE #contact-me form input::-moz-placeholder, #CONTACT_PAGE #contact-me form textarea::-moz-placeholder {
+#CONTACT_PAGE #contact-me .form input::-moz-placeholder, #CONTACT_PAGE #contact-me .form textarea::-moz-placeholder {
   color: #2c2e30;
   opacity: 0.5;
 }
-#CONTACT_PAGE #contact-me form input:-ms-input-placeholder, #CONTACT_PAGE #contact-me form textarea:-ms-input-placeholder {
+#CONTACT_PAGE #contact-me .form input:-ms-input-placeholder, #CONTACT_PAGE #contact-me .form textarea:-ms-input-placeholder {
   color: #2c2e30;
   opacity: 0.5;
 }
-#CONTACT_PAGE #contact-me form input::placeholder,
-#CONTACT_PAGE #contact-me form textarea::placeholder {
+#CONTACT_PAGE #contact-me .form input::placeholder,
+#CONTACT_PAGE #contact-me .form textarea::placeholder {
   color: #2c2e30;
   opacity: 0.5;
 }
-#CONTACT_PAGE #contact-me form .btn-group {
+#CONTACT_PAGE #contact-me .form .btn-group {
   justify-self: end;
 }
-#CONTACT_PAGE #contact-me form .btn-cont {
+#CONTACT_PAGE #contact-me .form .btn-cont {
   justify-self: end;
   width: 50%;
 }
@@ -2644,10 +2695,9 @@ footer .container .abn {
   }
   #CONTACT_PAGE #contact-me form {
     margin-bottom: 6rem;
-    height: 35vh;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-rows: repeat(5, auto);
     grid-template-areas: "n" "c" "e" "m" "btn-group";
     -moz-column-gap: 1rem;
          column-gap: 1rem;

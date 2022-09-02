@@ -161,6 +161,13 @@ button {
   grid-area: btn-sec;
 }
 
+.form-sec {
+  width: 100%;
+  height: fit-content;
+  background: transparent;
+  grid-area: btn-sec;
+}
+
 .nav-container {
   display: flex;
   background: rgba($bg, .9);
@@ -1353,51 +1360,53 @@ footer {
     height: 5rem;
   }
 
-  #interested {
-    margin-top: 10%;
-    margin-bottom: 10%;
 
-    .container {
-      height: auto;
-      padding: 5rem 0;
-      background: white;
-      box-shadow: 0px 14px 30px rgba(47, 47, 47, 0.1);
-      border-radius: 3rem;
-      display: grid;
-      grid-template-columns: .1fr 1fr .1fr;
-      grid-template-rows: auto;
-      grid-template-areas:
-        ". h1 ."
-        ". p ."
-        ". btn ."
-      ;
-      align-items: center;
-      z-index: -2;
-      column-gap: 2rem;
-      row-gap: 5rem;
-      justify-items: center;
-    }
+}
 
-    h1 {
-      align-self: center;
-      place-self: center;
-    }
+#interested {
+  margin-top: 10%;
+  margin-bottom: 10%;
 
-    p {
-      text-align: center;
-    }
+  .container {
+    height: auto;
+    padding: 5rem 0;
+    background: white;
+    box-shadow: 0px 14px 30px rgba(47, 47, 47, 0.1);
+    border-radius: 3rem;
+    display: grid;
+    grid-template-columns: .1fr 1fr .1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      ". h1 ."
+      ". p ."
+      ". btn ."
+    ;
+    align-items: center;
+    z-index: -2;
+    column-gap: 2rem;
+    row-gap: 5rem;
+    justify-items: center;
+  }
+
+  h1 {
+    align-self: center;
+    place-self: center;
+  }
+
+  p {
+    text-align: center;
+  }
 
 
-    .btn-group {
-      grid-area: btn;
-      justify-content: center;
-      align-items: center;
-    }
+  .btn-group {
+    grid-area: btn;
+    justify-content: center;
+    align-items: center;
+  }
 
-    .btn-cont {
-      justify-self: center;
-      width: 30%;
-    }
+  .btn-cont {
+    justify-self: center;
+    width: 30%;
   }
 }
 
@@ -1870,6 +1879,9 @@ footer {
 
 #WORK_PAGE {
   #work {
+    overflow: hidden;
+    position: relative;
+    display: flex;
 
     .container {
       padding-top: 10rem;
@@ -1933,10 +1945,51 @@ footer {
     }
 
     .view-proj {
-      position: absolute;
-      background-color: #9D9D9D;
+      box-sizing: content-box;
+      color: white;
+      opacity: 0;
+      visibility: hidden;
+      z-index: 100;
+      position: fixed;
+      left: 0;
+      right: 0;
+      max-height: 100vh;
+      background-color: rgba(32, 32, 32, 0.809);
+      backdrop-filter: blur(.5rem);
+      transition: opacity .4s ease, visibility .4s ease;
+      overflow-y: scroll;
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        padding: 6rem 0;
+        position: relative;
+
+        .proj-img {
+          background: url("../img/project_thumbnails/Piano_dribbble_shot.jpg");
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: left;
+          height: 70vh;
+          width: 100%;
+        }
+
+        .close {
+          text-decoration: underline;
+          position: absolute;
+          right: 0;
+        }
+      }
+
+
     }
 
+    .toggleOpacity {
+      visibility: visible;
+      transition: opacity .4s ease, visibility .4s ease;
+      opacity: 1;
+    }
   }
 }
 
@@ -1953,21 +2006,19 @@ footer {
 
     }
 
-    .btn-cont {
+    .get-started {
       width: 20%;
       margin-bottom: 10rem;
 
     }
 
-    form {
+    .form {
       margin-bottom: 6rem;
-      height: 23vh;
+      // height: 23vh;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(3, 1fr);
-      grid-template-areas:
-
-        "n m"
+      grid-template-areas: "n m"
         "c m"
         "e btn-group"
 

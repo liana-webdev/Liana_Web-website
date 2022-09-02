@@ -78,3 +78,18 @@ var animateHTML = function () {
   init();
   checkPosition();
 })();
+
+// * View project
+
+const closePrev = document.getElementsByClassName('close')[0];
+const viewProj = document.getElementsByClassName('view-proj')[0];
+
+document.getElementById('seePianoLessons').addEventListener('click', () => {
+  viewProj.classList.toggle('toggleOpacity');
+  console.log('hi');
+});
+
+closePrev.addEventListener('click', () => {
+  console.log('bye');
+  viewProj.classList.toggle('toggleOpacity');
+});
