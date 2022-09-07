@@ -81,15 +81,52 @@ var animateHTML = function () {
 
 // * View project
 
-const closePrev = document.getElementsByClassName('close')[0];
-const viewProj = document.getElementsByClassName('view-proj')[0];
+const closePiano = document.getElementsByClassName('close-piano')[0];
+const closeLwave = document.getElementsByClassName('close-lwave')[0];
+const closeArch = document.getElementsByClassName('close-arch')[0];
+const closeBentley = document.getElementsByClassName('close-bentley')[0];
+const viewProjPiano = document.getElementsByClassName('vp-piano')[0];
+const viewProjLwave = document.getElementsByClassName('vp-lwave')[0];
+const viewProjArch = document.getElementsByClassName('vp-arch')[0];
+const viewProjBentley = document.getElementsByClassName('vp-bentley')[0];
 
+// Close project view
+closePiano.addEventListener('click', () => {
+  console.log('bye');
+  viewProjPiano.classList.toggle('toggleOpacity');
+});
+
+closeLwave.addEventListener('click', () => {
+  console.log('bye');
+  viewProjLwave.classList.toggle('toggleOpacity');
+});
+
+closeArch.addEventListener('click', () => {
+  console.log('bye');
+  viewProjArch.classList.toggle('toggleOpacity');
+});
+closeBentley.addEventListener('click', () => {
+  console.log('bye');
+  viewProjBentley.classList.toggle('toggleOpacity');
+});
+
+// View Project
 document.getElementById('seePianoLessons').addEventListener('click', () => {
-  viewProj.classList.toggle('toggleOpacity');
+  viewProjPiano.classList.toggle('toggleOpacity');
   console.log('hi');
 });
 
-closePrev.addEventListener('click', () => {
-  console.log('bye');
-  viewProj.classList.toggle('toggleOpacity');
+document.getElementById('seeLwave').addEventListener('click', () => {
+  viewProjLwave.classList.toggle('toggleOpacity');
+  console.log('hi');
+});
+
+document.getElementById('seeArch').addEventListener('click', () => {
+  viewProjArch.classList.toggle('toggleOpacity');
+  console.log('arch');
+});
+
+document.getElementById('seeBentley').addEventListener('click', () => {
+  viewProjBentley.classList.toggle('toggleOpacity');
+  console.log('spur');
 });

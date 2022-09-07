@@ -310,6 +310,11 @@ nav {
   top: 10%;
 }
 
+.get-estimate,
+.see-more-works,
+.learn-more {
+  text-decoration: underline;
+}
 
 #first-screen {
 
@@ -506,7 +511,7 @@ nav {
     }
 
     &:nth-child(2) {
-      background: url("../img/gradients/gradient_1/G1_b_pass_through.png");
+      background: url("../img/gradients/gradient_1/G1_b_pass_through.svg");
       background-size: 80%;
       background-repeat: no-repeat;
       background-position: center;
@@ -517,7 +522,7 @@ nav {
     }
 
     &:nth-child(3) {
-      background: url("../img/gradients/gradient_1/G1_b_color_dodge.png");
+      background: url("../img/gradients/gradient_1/G1_b_color_dodge.svg");
       background-size: 80%;
       background-repeat: no-repeat;
       background-position: center;
@@ -529,7 +534,7 @@ nav {
     }
 
     &:nth-child(4) {
-      background: url("../img/gradients/gradient_1/G1_top_color_dodge.png");
+      background: url("../img/gradients/gradient_1/G1_top_color_dodge.svg");
       background-size: 80%;
       background-repeat: no-repeat;
       background-position: center;
@@ -619,9 +624,10 @@ nav {
   .container {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    grid-template-rows: 2fr;
+    grid-template-rows: .1fr 1fr .2fr;
     grid-template-areas:
-      "h1 desc"
+      "h1 h1"
+      "p me"
       "gv lm"
     ;
 
@@ -629,14 +635,21 @@ nav {
     row-gap: 80px;
   }
 
+  .me {
+    grid-area: me;
+    background: url("../img/Liana_Photo.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center right;
+    width: 100%;
+    height: 100%;
+  }
+
   h1 {
     text-shadow: $headerShadow;
     grid-area: h1;
   }
 
-  p {
-    grid-area: desc;
-  }
 
   .greenVector {
     grid-area: gv;
@@ -749,6 +762,11 @@ nav {
     column-gap: 3rem;
     row-gap: 3rem;
     justify-items: center;
+  }
+
+  a {
+    color: white;
+    font-family: 'work-sans', sans-serif;
   }
 
   h1 {
@@ -926,6 +944,11 @@ footer {
       grid-area: abn;
     }
   }
+
+  a {
+    color: white;
+    opacity: 1 !important;
+  }
 }
 
 #ABOUT_PAGE {
@@ -938,7 +961,6 @@ footer {
       grid-template-areas:
         "me h1"
         "me p"
-
       ;
       column-gap: 3rem;
       row-gap: 4rem;
@@ -1867,8 +1889,8 @@ footer {
       width: 100%;
       height: 100%;
       background:
-        url("../img/project_thumbnails/Architecture_projects_anim.gif"),
-        url("../img/project_thumbnails/Architecture_projects_still.jpg");
+        url("../img/project_thumbnails/Arch_AnimProt.gif"),
+        url("../img/project_thumbnails/Arch_Still.png");
       background-repeat: no-repeat;
       background-size: contain;
       background-position: center;
@@ -1966,14 +1988,83 @@ footer {
         padding: 6rem 0;
         position: relative;
 
+        .img1-piano {
+          background: url("../img/project_thumbnails/PianoLessons_MacBook.png");
+        }
+
+        .img2-piano {
+          background: url("../img/project_thumbnails/PianoLessons_iPhone.png");
+        }
+
+        .img3-piano {
+          background: url("../img/project_thumbnails/Piano_AnimProt.gif");
+        }
+
+        .img1-lwave {
+          background: url("../img/project_thumbnails/lwave_1.png");
+        }
+
+        .img2-lwave {
+          background: url("../img/project_thumbnails/lwave_2.png");
+        }
+
+        .img3-lwave {
+          background: url("../img/project_thumbnails/lwave_3.png");
+        }
+
+        .img4-lwave {
+          background: url("../img/project_thumbnails/lwave_4.png");
+        }
+
+        .img1-arch {
+          background: url("../img/project_thumbnails/arch1.jpg");
+        }
+
+        .img2-arch {
+          background: url("../img/project_thumbnails/arch2.jpg");
+        }
+
+        .img3-arch {
+          background: url("../img/project_thumbnails/Arch_AnimProt.gif");
+        }
+
+        .img4-arch {
+          background: url("../img/project_thumbnails/Architecture_projects_anim.gif");
+        }
+
+        .img1-spur {
+          background: url("../img/project_thumbnails/Spur_Macbook.png");
+        }
+
+        .img2-spur {
+          background: url("../img/project_thumbnails/Spur_Phone1.png");
+        }
+
+        .img3-spur {
+          background: url("../img/project_thumbnails/Spur_iPad.png");
+        }
+
+        .img4-spur {
+          background: url("../img/project_thumbnails/Spur_Phone2.png");
+        }
+
+
+
+
+        h2 {
+          text-align: center;
+        }
+
         .proj-img {
-          background: url("../img/project_thumbnails/Piano_dribbble_shot.jpg");
           background-size: contain;
           background-repeat: no-repeat;
-          background-position: left;
-          height: 70vh;
+          background-position: center;
+          height: 50vh;
           width: 100%;
+          margin-bottom: 5rem;
         }
+
+
 
         .close {
           text-decoration: underline;
@@ -2073,7 +2164,7 @@ footer {
 
       .btn-cont {
         justify-self: end;
-        width: 50%;
+        width: 100%;
       }
     }
   }

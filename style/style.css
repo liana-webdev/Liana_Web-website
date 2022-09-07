@@ -286,6 +286,12 @@ nav .logo {
   top: 10%;
 }
 
+.get-estimate,
+.see-more-works,
+.learn-more {
+  text-decoration: underline;
+}
+
 #first-screen .container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -466,7 +472,7 @@ nav .logo {
   background-position: center;
 }
 .gradient_1 div:nth-child(2) {
-  background: url("../img/gradients/gradient_1/G1_b_pass_through.png");
+  background: url("../img/gradients/gradient_1/G1_b_pass_through.svg");
   background-size: 80%;
   background-repeat: no-repeat;
   background-position: center;
@@ -476,7 +482,7 @@ nav .logo {
   transform: translate(-30px, -40px);
 }
 .gradient_1 div:nth-child(3) {
-  background: url("../img/gradients/gradient_1/G1_b_color_dodge.png");
+  background: url("../img/gradients/gradient_1/G1_b_color_dodge.svg");
   background-size: 80%;
   background-repeat: no-repeat;
   background-position: center;
@@ -486,7 +492,7 @@ nav .logo {
   transform: translate(20px, -40px);
 }
 .gradient_1 div:nth-child(4) {
-  background: url("../img/gradients/gradient_1/G1_top_color_dodge.png");
+  background: url("../img/gradients/gradient_1/G1_top_color_dodge.svg");
   background-size: 80%;
   background-repeat: no-repeat;
   background-position: center;
@@ -561,18 +567,24 @@ nav .logo {
 #hi .container {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  grid-template-rows: 2fr;
-  grid-template-areas: "h1 desc" "gv lm";
+  grid-template-rows: 0.1fr 1fr 0.2fr;
+  grid-template-areas: "h1 h1" "p me" "gv lm";
   -moz-column-gap: 2.5%;
        column-gap: 2.5%;
   row-gap: 80px;
 }
+#hi .me {
+  grid-area: me;
+  background: url("../img/Liana_Photo.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center right;
+  width: 100%;
+  height: 100%;
+}
 #hi h1 {
   text-shadow: 0px 0.3rem 0.4rem rgba(0, 0, 0, 0.09), 0px 0.3rem 0.5rem rgba(0, 0, 0, 0.206);
   grid-area: h1;
-}
-#hi p {
-  grid-area: desc;
 }
 #hi .greenVector {
   grid-area: gv;
@@ -671,6 +683,10 @@ nav .logo {
        column-gap: 3rem;
   row-gap: 3rem;
   justify-items: center;
+}
+#special a {
+  color: white;
+  font-family: "work-sans", sans-serif;
 }
 #special h1 {
   text-shadow: 0px 0.3rem 0.4rem rgba(0, 0, 0, 0.09), 0px 0.3rem 0.5rem rgba(0, 0, 0, 0.206);
@@ -817,6 +833,10 @@ footer .container .abn {
   justify-self: end;
   opacity: 0.5;
   grid-area: abn;
+}
+footer a {
+  color: white;
+  opacity: 1 !important;
 }
 
 #ABOUT_PAGE #about-me .container {
@@ -1571,7 +1591,7 @@ footer .container .abn {
   grid-area: img;
   width: 100%;
   height: 100%;
-  background: url("../img/project_thumbnails/Architecture_projects_anim.gif"), url("../img/project_thumbnails/Architecture_projects_still.jpg");
+  background: url("../img/project_thumbnails/Arch_AnimProt.gif"), url("../img/project_thumbnails/Arch_Still.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -1656,13 +1676,61 @@ footer .container .abn {
   padding: 6rem 0;
   position: relative;
 }
+#WORK_PAGE #work .view-proj .container .img1-piano {
+  background: url("../img/project_thumbnails/PianoLessons_MacBook.png");
+}
+#WORK_PAGE #work .view-proj .container .img2-piano {
+  background: url("../img/project_thumbnails/PianoLessons_iPhone.png");
+}
+#WORK_PAGE #work .view-proj .container .img3-piano {
+  background: url("../img/project_thumbnails/Piano_AnimProt.gif");
+}
+#WORK_PAGE #work .view-proj .container .img1-lwave {
+  background: url("../img/project_thumbnails/lwave_1.png");
+}
+#WORK_PAGE #work .view-proj .container .img2-lwave {
+  background: url("../img/project_thumbnails/lwave_2.png");
+}
+#WORK_PAGE #work .view-proj .container .img3-lwave {
+  background: url("../img/project_thumbnails/lwave_3.png");
+}
+#WORK_PAGE #work .view-proj .container .img4-lwave {
+  background: url("../img/project_thumbnails/lwave_4.png");
+}
+#WORK_PAGE #work .view-proj .container .img1-arch {
+  background: url("../img/project_thumbnails/arch1.jpg");
+}
+#WORK_PAGE #work .view-proj .container .img2-arch {
+  background: url("../img/project_thumbnails/arch2.jpg");
+}
+#WORK_PAGE #work .view-proj .container .img3-arch {
+  background: url("../img/project_thumbnails/Arch_AnimProt.gif");
+}
+#WORK_PAGE #work .view-proj .container .img4-arch {
+  background: url("../img/project_thumbnails/Architecture_projects_anim.gif");
+}
+#WORK_PAGE #work .view-proj .container .img1-spur {
+  background: url("../img/project_thumbnails/Spur_Macbook.png");
+}
+#WORK_PAGE #work .view-proj .container .img2-spur {
+  background: url("../img/project_thumbnails/Spur_Phone1.png");
+}
+#WORK_PAGE #work .view-proj .container .img3-spur {
+  background: url("../img/project_thumbnails/Spur_iPad.png");
+}
+#WORK_PAGE #work .view-proj .container .img4-spur {
+  background: url("../img/project_thumbnails/Spur_Phone2.png");
+}
+#WORK_PAGE #work .view-proj .container h2 {
+  text-align: center;
+}
 #WORK_PAGE #work .view-proj .container .proj-img {
-  background: url("../img/project_thumbnails/Piano_dribbble_shot.jpg");
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: left;
-  height: 70vh;
+  background-position: center;
+  height: 50vh;
   width: 100%;
+  margin-bottom: 5rem;
 }
 #WORK_PAGE #work .view-proj .container .close {
   text-decoration: underline;
@@ -1743,7 +1811,7 @@ footer .container .abn {
 }
 #CONTACT_PAGE #contact-me .form .btn-cont {
   justify-self: end;
-  width: 50%;
+  width: 100%;
 }
 
 @media only screen and (max-width: 900px) {
@@ -1866,6 +1934,7 @@ footer .container .abn {
     transition: margin-left 0.2s cubic-bezier(0.06, 0.41, 0.12, 0.93) 0.11s, opacity 1.11s cubic-bezier(0.06, 0.41, 0.12, 0.93);
   }
   nav .navbar-list .get-estimate {
+    text-decoration: underline;
     margin-left: 40px;
     opacity: 0;
     transition: margin-left 0.2s cubic-bezier(0.06, 0.41, 0.12, 0.93) 0.13s, opacity 1.13s cubic-bezier(0.06, 0.41, 0.12, 0.93);
@@ -1904,6 +1973,7 @@ footer .container .abn {
     margin-left: 0px;
     opacity: 1;
     transition: margin-left 0.5s ease 1s, opacity 0.5s ease 1s;
+    text-decoration: underline;
   }
   nav .toggle-navbar.changeIcon .a {
     transform: rotate(45deg);
@@ -1960,15 +2030,13 @@ footer .container .abn {
     margin-top: 5rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 0.1fr 1fr 0.1fr;
-    grid-template-areas: "h1 h1" "desc desc" "gv lm";
+    grid-template-rows: 0.1fr 0.5fr 1fr 0.1fr;
+    grid-template-areas: "h1 h1" "me me" "p p" "gv lm";
     row-gap: 3rem;
   }
-  #hi h1 {
-    grid-area: h1;
-  }
-  #hi p {
-    grid-area: desc;
+  #hi .me {
+    grid-area: me;
+    background-position: center;
   }
   #hi .greenVector {
     height: 100px;
@@ -2115,6 +2183,10 @@ footer .container .abn {
   footer .container .social .facebook {
     width: 2rem;
     height: 2rem;
+  }
+  footer .container a {
+    color: white;
+    opacity: 1 !important;
   }
   footer .container ul {
     grid-area: links;
@@ -2693,7 +2765,7 @@ footer .container .abn {
     width: 100%;
     margin-bottom: 5rem;
   }
-  #CONTACT_PAGE #contact-me form {
+  #CONTACT_PAGE #contact-me .form {
     margin-bottom: 6rem;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -2703,26 +2775,26 @@ footer .container .abn {
          column-gap: 1rem;
     row-gap: 1rem;
   }
-  #CONTACT_PAGE #contact-me form .name {
+  #CONTACT_PAGE #contact-me .form .name {
     grid-area: n;
   }
-  #CONTACT_PAGE #contact-me form .comp {
+  #CONTACT_PAGE #contact-me .form .comp {
     grid-area: c;
   }
-  #CONTACT_PAGE #contact-me form .email {
+  #CONTACT_PAGE #contact-me .form .email {
     grid-area: e;
   }
-  #CONTACT_PAGE #contact-me form .mess {
+  #CONTACT_PAGE #contact-me .form .mess {
     grid-area: m;
   }
-  #CONTACT_PAGE #contact-me form input {
+  #CONTACT_PAGE #contact-me .form input {
     height: 3rem;
   }
-  #CONTACT_PAGE #contact-me form textarea {
+  #CONTACT_PAGE #contact-me .form textarea {
     height: 6rem;
   }
-  #CONTACT_PAGE #contact-me form input,
-#CONTACT_PAGE #contact-me form textarea {
+  #CONTACT_PAGE #contact-me .form input,
+#CONTACT_PAGE #contact-me .form textarea {
     border: none;
     border-radius: 0.9rem;
     font-size: 1rem;
@@ -2730,23 +2802,23 @@ footer .container .abn {
     font-family: "work-sans", sans-serif;
     font-weight: 400;
   }
-  #CONTACT_PAGE #contact-me form input::-moz-placeholder, #CONTACT_PAGE #contact-me form textarea::-moz-placeholder {
+  #CONTACT_PAGE #contact-me .form input::-moz-placeholder, #CONTACT_PAGE #contact-me .form textarea::-moz-placeholder {
     color: #2c2e30;
     opacity: 0.5;
   }
-  #CONTACT_PAGE #contact-me form input:-ms-input-placeholder, #CONTACT_PAGE #contact-me form textarea:-ms-input-placeholder {
+  #CONTACT_PAGE #contact-me .form input:-ms-input-placeholder, #CONTACT_PAGE #contact-me .form textarea:-ms-input-placeholder {
     color: #2c2e30;
     opacity: 0.5;
   }
-  #CONTACT_PAGE #contact-me form input::placeholder,
-#CONTACT_PAGE #contact-me form textarea::placeholder {
+  #CONTACT_PAGE #contact-me .form input::placeholder,
+#CONTACT_PAGE #contact-me .form textarea::placeholder {
     color: #2c2e30;
     opacity: 0.5;
   }
-  #CONTACT_PAGE #contact-me form .btn-group {
+  #CONTACT_PAGE #contact-me .form .btn-group {
     justify-self: end;
   }
-  #CONTACT_PAGE #contact-me form .btn-cont {
+  #CONTACT_PAGE #contact-me .form .btn-cont {
     justify-self: end;
     width: 100%;
   }

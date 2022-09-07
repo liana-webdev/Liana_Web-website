@@ -171,6 +171,7 @@
       }
 
       .get-estimate {
+        text-decoration: underline;
         margin-left: 40px;
         opacity: 0;
         transition: margin-left .2s $timingFunc .13s,
@@ -228,6 +229,7 @@
         opacity: 1;
         transition: margin-left .5s ease 1s,
           opacity .5s ease 1s;
+        text-decoration: underline;
       }
     }
 
@@ -313,26 +315,21 @@
   #hi {
     .container {
       margin-top: 5rem;
-
       display: grid;
       grid-template-columns: 1fr 1fr;
-      grid-template-rows: .1fr 1fr .1fr;
+      grid-template-rows: .1fr .5fr 1fr .1fr;
       grid-template-areas:
         "h1 h1"
-        "desc desc"
+        "me me"
+        "p p"
         "gv lm"
       ;
-
-      // column-gap: 3rem;
       row-gap: 3rem;
     }
 
-    h1 {
-      grid-area: h1;
-    }
-
-    p {
-      grid-area: desc;
+    .me {
+      grid-area: me;
+      background-position: center;
     }
 
     .greenVector {
@@ -400,8 +397,6 @@
 
   // * Special Reward
   #special {
-
-
     margin-top: 10%;
     margin-bottom: 10%;
 
@@ -519,6 +514,11 @@
           width: 2rem;
           height: 2rem;
         }
+      }
+
+      a {
+        color: white;
+        opacity: 1 !important;
       }
 
       ul {
@@ -1291,7 +1291,7 @@
 
       }
 
-      form {
+      .form {
         margin-bottom: 6rem;
         display: grid;
         grid-template-columns: repeat(1, 1fr);
